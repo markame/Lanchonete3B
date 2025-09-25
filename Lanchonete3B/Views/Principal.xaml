@@ -3,50 +3,107 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lanchonete3B.Views.Principal"
              Title="Principal">
-
     <ScrollView>
-        <VerticalStackLayout Margin="30,40" Spacing="20">
-            <StackLayout Spacing="30">
-            <Label Text="Olá, User" x:Name="user"/>
-                <Frame HeightRequest="250" CornerRadius="10" BorderColor="LightGray">
-                </Frame>
+    <VerticalStackLayout>
+            <StackLayout Margin="30" Spacing="20">
+        <Label 
+            Text="Olá, Morto de fome!" 
+            HorizontalOptions="Start" />
             </StackLayout>
-            <ScrollView Orientation="Horizontal"> 
-            <HorizontalStackLayout  Spacing="10">
-                
-            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="10" BorderColor="LightGray">
-            </Frame>
-            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="10" BorderColor="LightGray">
-            </Frame>
-            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="10" BorderColor="LightGray">
-            </Frame>
-            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="10" BorderColor="LightGray">
-            </Frame>
-                
-            </HorizontalStackLayout>
+            <StackLayout Margin="15">
+                <Border
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 20"
+                    Padding="10"
+                    HeightRequest="290">
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                        </Shadow>
+                    </Border.Shadow>
+                    <StackLayout>
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+            <StackLayout Margin="30,0">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Promoções do dia:"/>
+            </StackLayout>
+            <ScrollView Orientation="Horizontal">
+            <StackLayout Spacing="10" Margin="15" Orientation="Horizontal">
+                <Border
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 20"
+                    Padding="10"
+                    HeightRequest="100"
+                    WidthRequest="100"> 
+                    
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                        </Shadow>
+                    </Border.Shadow>
+                    <StackLayout>
+                    </StackLayout>
+                </Border>
+                <Border
+               StrokeThickness="3"
+               StrokeShape="RoundRectangle 20"
+               Padding="10"
+               HeightRequest="100"
+               WidthRequest="100">
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                        </Shadow>
+                    </Border.Shadow>
+                    <StackLayout>
+                    </StackLayout>
+                </Border>
+                <Border
+ StrokeThickness="3"
+ StrokeShape="RoundRectangle 20"
+ Padding="10"
+ HeightRequest="100"
+ WidthRequest="100">
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                        </Shadow>
+                    </Border.Shadow>
+                    <StackLayout>
+                    </StackLayout>
+                </Border>
+                <Border
+ StrokeThickness="3"
+ StrokeShape="RoundRectangle 20"
+ Padding="10"
+ HeightRequest="100"
+ WidthRequest="100">
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                        </Shadow>
+                    </Border.Shadow>
+                    <StackLayout>
+                    </StackLayout>
+                </Border>
+                    <Border
+StrokeThickness="3"
+StrokeShape="RoundRectangle 20"
+Padding="10"
+HeightRequest="100"
+WidthRequest="100">
+
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                            </Shadow>
+                        </Border.Shadow>
+                        <StackLayout>
+                        </StackLayout>
+                    </Border>
+
+                </StackLayout>
             </ScrollView>
-
-            <StackLayout>
-                <ListView x:Name="ProdutosListView" HasUnevenRows="True">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal" Spacing="10">
-                                    <Image Source="{Binding ImagemFonte}" WidthRequest="80" HeightRequest="80" Aspect="AspectFill"/>
-                                    <StackLayout>
-                                        <Label Text="{Binding Nome}" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Descricao}" FontSize="14" TextColor="Gray"/>
-                                        <Label Text="{Binding Preco, StringFormat='Preço: {0:C}'}"/>
-                                        <Label Text="{Binding Ativo, StringFormat='Ativo: {0}'}"/>
-                                    </StackLayout>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-
-            </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
