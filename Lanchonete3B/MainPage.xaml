@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lanchonete3B.MainPage">
+
+    <ScrollView>
+        
+        <VerticalStackLayout
+            Padding="20,0"
+            Spacing="0">
+            <StackLayout HorizontalOptions="End">
+                <Label Text="?"
+                       FontSize="30"
+                       TextColor="Grey"
+                       FontAttributes="Bold"
+                       FontFamily="roboto">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            NumberOfTapsRequired="1"
+                            Tapped="TapGestureRecognizer_Tapped_1">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>   
+            </StackLayout>
+            <Image
+                Source="logocactus.png"
+                HeightRequest="380"
+                Aspect="AspectFit"
+               />
+
+
+            <StackLayout Spacing="20">
+                <Button
+                    x:Name="entrarbtn"
+                Text="Entrar" 
+                HorizontalOptions="Fill"
+                    HeightRequest="70"
+                    CornerRadius="40"
+                    Clicked="entrarbtn_Clicked"/>
+                <Button
+                  
+                    Text="Login com Google"
+                    HorizontalOptions="Fill"
+                    HeightRequest="70"
+                    CornerRadius="40"/>
+                <Button
+                     Text="Login com Apple"
+                     HorizontalOptions="Fill"
+                    HeightRequest="70"
+                    CornerRadius="40"/>
+            </StackLayout>
+            <StackLayout Padding="30">
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Problemas com seu login?"
+                    TextColor="Blue"
+                    TextDecorations="Underline"
+                    FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

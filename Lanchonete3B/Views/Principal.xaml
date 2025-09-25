@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lanchonete3B.Views.Principal"
+             Title="Principal">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="30,40" Spacing="20">
+            <StackLayout Spacing="30">
+            <Label Text="Olá, User" x:Name="user"/>
+                <Frame HeightRequest="250" CornerRadius="10" BorderColor="LightGray">
+                </Frame>
+            </StackLayout>
+            <ScrollView Orientation="Horizontal"> 
+            <HorizontalStackLayout  Spacing="10">
+                
+            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="10" BorderColor="LightGray">
+            </Frame>
+            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="10" BorderColor="LightGray">
+            </Frame>
+            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="10" BorderColor="LightGray">
+            </Frame>
+            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="10" BorderColor="LightGray">
+            </Frame>
+                
+            </HorizontalStackLayout>
+            </ScrollView>
+
+            <StackLayout>
+                <ListView x:Name="ProdutosListView" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Image Source="{Binding ImagemFonte}" WidthRequest="80" HeightRequest="80" Aspect="AspectFill"/>
+                                    <StackLayout>
+                                        <Label Text="{Binding Nome}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Descricao}" FontSize="14" TextColor="Gray"/>
+                                        <Label Text="{Binding Preco, StringFormat='Preço: {0:C}'}"/>
+                                        <Label Text="{Binding Ativo, StringFormat='Ativo: {0}'}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
