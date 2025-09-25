@@ -1,4 +1,3 @@
-
 using System.Collections.ObjectModel;
 
 namespace Lanchonete3B.Views;

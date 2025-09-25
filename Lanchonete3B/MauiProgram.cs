@@ -1,6 +1,4 @@
-﻿using Lanchonete3B.Class;
-using Lanchonete3B.Service;
-using Lanchonete3B.Views;
+﻿
 using Microsoft.Extensions.Logging;
 
 namespace Lanchonete3B
@@ -22,7 +20,7 @@ namespace Lanchonete3B
     		builder.Logging.AddDebug();
 
 #endif
-            builder.Services.AddSingleton<IProdutoService, ProdutoService>();
+          
             
             return builder.Build();
         }
