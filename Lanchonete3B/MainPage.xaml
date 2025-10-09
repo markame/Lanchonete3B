@@ -47,7 +47,8 @@
                      Text="Login com Apple"
                      HorizontalOptions="Fill"
                     HeightRequest="70"
-                    CornerRadius="40"/>
+                    CornerRadius="40"
+                    Clicked="Button_Clicked"/>
             </StackLayout>
             <StackLayout Padding="30">
                 <Label

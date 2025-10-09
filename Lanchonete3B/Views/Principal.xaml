@@ -4,18 +4,18 @@
              x:Class="Lanchonete3B.Views.Principal"
              Title="Principal">
     <ScrollView>
-    <VerticalStackLayout>
+        <VerticalStackLayout>
             <StackLayout Margin="30" Spacing="20">
-        <Label 
-            Text="Olá, Morto de fome!" 
-            HorizontalOptions="Start" />
+                <Label 
+           Text="Olá, Morto de fome!" 
+           HorizontalOptions="Start" />
             </StackLayout>
             <StackLayout Margin="15">
                 <Border
-                    StrokeThickness="3"
-                    StrokeShape="RoundRectangle 20"
-                    Padding="10"
-                    HeightRequest="290">
+                   StrokeThickness="3"
+                   StrokeShape="RoundRectangle 20"
+                   Padding="10"
+                   HeightRequest="290">
                     <Border.Shadow>
                         <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
                         </Shadow>
@@ -26,67 +26,39 @@
             </StackLayout>
             <StackLayout Margin="30,0">
                 <Label
-                    FontAttributes="Bold"
-                    Text="Promoções do dia:"/>
+                   FontAttributes="Bold"
+                   Text="Promoções do dia:"/>
             </StackLayout>
             <ScrollView Orientation="Horizontal">
-            <StackLayout Spacing="10" Margin="15" Orientation="Horizontal">
-                <Border
-                    StrokeThickness="3"
-                    StrokeShape="RoundRectangle 20"
-                    Padding="10"
-                    HeightRequest="100"
-                    WidthRequest="100"> 
-                    
-                    <Border.Shadow>
-                        <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
-                        </Shadow>
-                    </Border.Shadow>
-                    <StackLayout>
-                    </StackLayout>
-                </Border>
-                <Border
-               StrokeThickness="3"
-               StrokeShape="RoundRectangle 20"
-               Padding="10"
-               HeightRequest="100"
-               WidthRequest="100">
+                <StackLayout Spacing="10" Margin="15" Orientation="Horizontal">
+                    <Border
+                   StrokeThickness="3"
+                   StrokeShape="RoundRectangle 20"
+                   Padding="10"
+                   HeightRequest="100"
+                   WidthRequest="100">
 
-                    <Border.Shadow>
-                        <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
-                        </Shadow>
-                    </Border.Shadow>
-                    <StackLayout>
-                    </StackLayout>
-                </Border>
-                <Border
- StrokeThickness="3"
- StrokeShape="RoundRectangle 20"
- Padding="10"
- HeightRequest="100"
- WidthRequest="100">
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                            </Shadow>
+                        </Border.Shadow>
+                        <StackLayout>
+                        </StackLayout>
+                    </Border>
+                    <Border
+              StrokeThickness="3"
+              StrokeShape="RoundRectangle 20"
+              Padding="10"
+              HeightRequest="100"
+              WidthRequest="100">
 
-                    <Border.Shadow>
-                        <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
-                        </Shadow>
-                    </Border.Shadow>
-                    <StackLayout>
-                    </StackLayout>
-                </Border>
-                <Border
- StrokeThickness="3"
- StrokeShape="RoundRectangle 20"
- Padding="10"
- HeightRequest="100"
- WidthRequest="100">
-
-                    <Border.Shadow>
-                        <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
-                        </Shadow>
-                    </Border.Shadow>
-                    <StackLayout>
-                    </StackLayout>
-                </Border>
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                            </Shadow>
+                        </Border.Shadow>
+                        <StackLayout>
+                        </StackLayout>
+                    </Border>
                     <Border
 StrokeThickness="3"
 StrokeShape="RoundRectangle 20"
@@ -101,9 +73,82 @@ WidthRequest="100">
                         <StackLayout>
                         </StackLayout>
                     </Border>
+                    <Border
+StrokeThickness="3"
+StrokeShape="RoundRectangle 20"
+Padding="10"
+HeightRequest="100"
+WidthRequest="100">
+
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                            </Shadow>
+                        </Border.Shadow>
+                        <StackLayout>
+                        </StackLayout>
+                    </Border>
+                    <Border
+                   StrokeThickness="3"
+                   StrokeShape="RoundRectangle 20"
+                   Padding="10"
+                   HeightRequest="100"
+                   WidthRequest="100">
+
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.4" Radius="20" Offset="0,9">
+                            </Shadow>
+                        </Border.Shadow>
+                        <StackLayout>
+                        </StackLayout>
+                    </Border>
 
                 </StackLayout>
             </ScrollView>
+
+            <CollectionView x:Name="ProdutosCollectionView"
+               SelectionMode="Single" Margin="15" >
+                <CollectionView.ItemTemplate >
+                    <DataTemplate >
+                        <StackLayout Padding="5">
+                            <Border  Stroke="Gray"
+                           StrokeThickness="1"
+                           StrokeShape="RoundRectangle 10">
+                                <StackLayout >
+                                    <StackLayout Orientation="Horizontal" Spacing="20">
+                                        <Border HeightRequest="100" 
+                                           WidthRequest="100"
+                                           StrokeThickness="0"
+                                           StrokeShape="Ellipse"
+                                           Padding="0">
+                                            <Image Source="{Binding ImagemUrl}" Aspect="AspectFill"/>
+                                        </Border>
+                                        <VerticalStackLayout Spacing="8" HorizontalOptions="Fill">
+
+                                            <Label Text="{Binding Nome}" 
+                                                  FontAttributes="Bold" 
+                                                  FontSize="16" 
+                                                  TextColor="#333"/>
+                                            <Label Text="{Binding Descricao}" 
+                                                  FontSize="Caption" 
+                                                  LineBreakMode="WordWrap" 
+                                                  MaxLines="5" 
+                                                  HorizontalOptions="Fill" 
+                                                  TextColor="#666"/>
+                                            <Label Text="{Binding Preco, StringFormat='R$ {0:F2}'}" 
+                                                  FontSize="16" 
+                                                  FontAttributes="Bold" 
+                                                  TextColor="#27ae60"/>
+                                        </VerticalStackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Border>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
         </VerticalStackLayout>
+
     </ScrollView>
 </ContentPage>
